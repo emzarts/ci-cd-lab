@@ -5,17 +5,17 @@ on:
     branches:
       - master 
 
-  jobs: 
-    run-tests:
-      runs-on: ubuntu-latest
-      steps: 
-        - name: Checkout Code
-          uses: actions/checkout@v2
+jobs: 
+  run-tests:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
-        - name: Install Go 
-          uses: actions/setup-go@v2
-          with: 
-            go-version: "^1.16"
+      - name: Install Go 
+        uses: actions/setup-go@v2
+        with: 
+          go-version: "^1.16"
 
-        - name: Run Tests
-          run: go tes -v ./...
+      - name: Run Tests
+        run: go tes -v ./...
